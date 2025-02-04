@@ -20,9 +20,11 @@ os.chdir(os.path.dirname(__file__))   # Elles permettent de se positionner dans 
 #  Si vous êtes à l'aise en programmation allez-y
 #  Des instructions détaillées sont données plus bas
 
-
+import csv
 ficher_a_lire = os.path.join("csvs", "Ex5 Stages.csv")
-
+with open(ficher_a_lire, "r", encoding="utf-8") as fichier:
+    lecteur = csv.reader(fichier, delimiter="|")
+    writer = csv.writer(fichier, delimiter="\n")
 
 
 
