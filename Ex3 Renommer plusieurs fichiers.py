@@ -14,6 +14,7 @@ for fichier in os.listdir("C:\\Users\\6256003\OneDrive - Cégep Édouard-Montpet
     nom, ext = os.path.splitext(fichier)
     titre, cours, numero = nom.split("_")
     nouveau_nom = f"{titre.strip()}-{cours.strip()}-{numero.strip().zfill(2)}{ext}"
+    os.rename("C:\\Users\\6256003\OneDrive - Cégep Édouard-Montpetit\\Prog2\\R03 Exercices Depart\\Ex3 Videos", "Exercies3Videos")
     
    
 
