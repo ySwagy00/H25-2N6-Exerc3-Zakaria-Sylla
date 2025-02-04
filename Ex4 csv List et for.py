@@ -22,10 +22,16 @@ os.chdir(os.path.dirname(__file__))   # Elles permettent de se positionner dans 
 # 
 #  Si vous êtes à l'aise en programmation allez-y
 #  Des instructions détaillées sont données plus bas
-
+import csv
 
 ficher_a_lire = os.path.join("csvs","Ex4 Emplois Reseautique.csv" )
 
+with open(ficher_a_lire, "r", encoding="utf-8") as fichier:
+    lecteur = csv.reader(fichier, delimiter=";")
+    next(lecteur)
+    for ligne in lecteur:
+     ligne[4] == "Dec" or ligne[4] == "Non déterminé"
+     print(ligne)
 
 
 
